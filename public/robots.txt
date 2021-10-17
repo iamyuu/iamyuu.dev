@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iamyuu.dev
+
+# Sitemaps
+Sitemap: https://iamyuu.dev/sitemap.xml

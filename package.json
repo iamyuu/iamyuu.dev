@@ -3,13 +3,15 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "astro dev --reload",
 		"start": "astro dev",
 		"build": "astro build"
 	},
 	"devDependencies": {
-		"astro": "0.20.8",
-		"@astrojs/renderer-preact": "0.2.2"
+		"@tailwindcss/typography": "0.4.1",
+		"astro": "0.20.9",
+		"daisyui": "1.14.3",
+		"tailwindcss": "2.2.16"
 	},
 	"volta": {
 		"node": "14.18.0",

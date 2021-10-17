@@ -1,88 +1,24 @@
 ---
 import { Markdown } from 'astro/components';
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-
-const title = 'About me'
-const permalink = 'https://iamyuu.dev/';
+import Layout from '../layouts/article.astro'
 ---
-<html class="theme-dark" lang="id">
-  <head>
-    <BaseHead title={title} description='Personal website' permalink={permalink} />
-    <link rel="stylesheet" href="/blog.css" />
 
-    <style>
-      body {
-        width: 100%;
-        display: grid;
-        grid-template-rows: 3.5rem 1fr;
-        --gutter: 0.5rem;
-        --doc-padding: 2rem;
-      }
+<Layout title='About'>
+	<h1 slot="title" class='article-title'>
+		About me <span role="img" aria-label="handshake">🤝</span>
+	</h1>
 
-      header {
-        width: 100%;
-        height: 100%;
-        background-color: var(--theme-bg-offset);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+	<Markdown>
+		Hi there! My name is **Muhammad Yusuf** atau **Yusuf**.
 
-      .content {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-      }
+		I am a software engineer born, raised, and currently living in [Bogor, Indonesia](https://kotabogor.go.id). I'm currently studying information systems at [Binus](https://onlinelearning.binus.ac.id) and also working as a React developer at [DataOn](https://dataon.com).
 
-      .content :global(* + *) {
-        margin-top: 1rem;
-      }
+		I am a curious person and I love to learn how things work and has a strong passion to learn new things related to software.
 
-			.latest {
-        font-size: 2.5rem;
-        font-weight: 700;
-      }
+		I started my career as a back-end developer using [Laravel](https://laravel.com) and [Node.js](https://nodejs.org), but lately I've been focusing more on front-end developer using [React](https://reactjs.org).
 
-			span[role="img"] {
-				margin-left: 0.5rem;
-			}
-    </style>
-  </head>
+		I've been building websites using various [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) frameworks, I'm not a fan of any framework out there.
 
-  <body>
-    <BlogHeader />
-    <div class="layout">
-      <article class="content">
-				<h1 class="latest">
-					{title} <span role="img" aria-label="handshake">🤝</span>
-				</h1>
-
-				<Markdown>
-					<!-- Hi there! My name is **Muhammad Yusuf** atau **Yusuf**.
-
-					I am a software engineer born, raised, and currently living in [Bogor, Indonesia](https://kotabogor.go.id). I'm currently studying information systems at [Binus](https://onlinelearning.binus.ac.id) and also working as a React developer at [DataOn](https://dataon.com).
-
-					I am a curious person and I love to learn how things work and has a strong passion to learn new things related to software.
-
-					I started my career as a back-end developer using [Laravel](https://laravel.com) and [Node.js](https://nodejs.org), but lately I've been focusing more on front-end developer using [React](https://reactjs.org).
-
-					I've been building websites using various [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) frameworks, I'm not a fan of any framework out there.
-
-					And the last **iamyuu** (read i am yuu) is my name on the internet ([@iamyuu027](https://twitter.com/iamyuu027) or just [@iamyuu](https://github.com/iamyuu)) -->
-
-					Hai, yang di sana! Nama saya **Muhammad Yusuf** atau **Yusuf**.
-
-					Saya seorang insinyur perangkat lunak yang lahir, besar, dan saat ini tinggal di [Bogor, Indonesia](https://kotabogor.go.id). Saat ini saya sedang belajar sistem informasi di [Binus](https://onlinelearning.binus.ac.id) dan juga berkerja sebagai React developer di [DataOn](https://dataon.com).
-
-					Saya adalah orang yang ingin tau dan mempelajari bagaimana sesuatu bisa berkerja, serta memiliki hasrat yang kuat untuk mempelajari hal-hal baru yang berhubungan dengan perangkat lunak.
-
-					Saya mengawali karir saya sebagai _back-end developer_ menggunakan [Laravel](https://laravel.com) dan [Node.js](https://nodejs.org), tetapi belakangan ini saya lebih berfokus pada _front-end developer_ menggunakan [React](https://reactjs.org).
-
-					Saya telah membangun website menggunakan berbagai kerangka kerja [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), saya tidak fanatik dengan suatu kerangka kerja manapun di luar sana.
-
-					Dan yang terakhir **iamyuu** (baca i am yuu) adalah nama saya di internet ([@iamyuu027](https://twitter.com/iamyuu027) atau hanya [@iamyuu](https://github.com/iamyuu))
-				</Markdown>
-      </article>
-    </div>
-  </body>
-</html>
+		And the last **iamyuu** (read i am yuu) is my name on the internet ([@iamyuu027](https://twitter.com/iamyuu027) or just [@iamyuu](https://github.com/iamyuu))
+	</Markdown>
+</Layout>

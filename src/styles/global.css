@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.article-title {
+	@apply text-4xl font-extrabold leading-snug tracking-tight mb-4;
+}
