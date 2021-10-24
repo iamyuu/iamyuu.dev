@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/article.astro'
+import {formatDate} from '../utils/misc.js'
+
+const {title, publishDate, tags} = Astro.props.content
+const date = formatDate(publishDate)
+---
+
+<Layout {...Astro.props}>
+	<div slot='header' class='text-center'>
+		<h1>{title}</h1>
+
+		<span class='text-gray-600'>
+			{date}
+		</span>
+	</div>
+
+	<slot />
+
+	<footer slot='footer'>
+		{tags.map(tag => (
+			<a href={tag} class='mr-2 font-medium hover:underline'>
+				#{tag}
+			</a>
+		))}
+	</footer>
+</Layout>
