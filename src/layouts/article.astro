@@ -6,13 +6,13 @@ export type {Props}
 
 <Layout {...Astro.props}>
 	<div class='max-w-6xl mx-auto px-4 sm:px-6'>
-		<div class='pt-24 pb-12 md:pt-40 md:pb-20'>
-			<div class='max-w-3xl text-left'>
-				<slot name="title" />
-			</div>
-
-			<article class="prose prose-lg md:prose-xl xl:prose-2xl">
+		<div class='pt-24 pb-12 md:pt-40 md:pb-20 prose prose-lg md:prose-xl xl:prose-2xl mx-auto'>
+			<article>
+				<header class='max-w-3xl mx-auto'>
+					<slot name="header" />
+				</header>
 				<slot />
+				<slot name="footer" />
 			</article>
 		</div>
 	</div>
