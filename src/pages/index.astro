@@ -9,7 +9,9 @@ interface MarkdownFrontmatter {
   tags: Array<string>;
 }
 
-const allPosts = Astro.fetchContent<MarkdownFrontmatter>('./article/*.md')
+const allPosts = Astro
+	.fetchContent<MarkdownFrontmatter>('./article/*.md')
+	.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf())
 ---
 
 <Layout>
