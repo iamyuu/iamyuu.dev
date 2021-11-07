@@ -3,6 +3,7 @@ layout: "../../layouts/article-post.astro"
 title: "Hello World"
 description: "Beberapa rencana yang mau saya tambahkan di website ini"
 publishDate: 2021-10-17
+tags: ["random"]
 ---
 
 Hello World! seperti biasa ketika kita belajar bahasa pemrogramaan kita awali dengan hello world.
